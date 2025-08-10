@@ -46,8 +46,8 @@
 - **日志系统（spdlog）**：记录扫描状态与异常。
 
 ---
-
 ## 📊 功能模块图
+
 ```mermaid
 flowchart LR
     A[启动程序] --> B[读取配置文件]
@@ -59,33 +59,7 @@ flowchart LR
     G --> H[输出报告 / 可视化]
     H --> I[用户查看结果]
 
-graph TD
-    subgraph Scan[扫描流程]
-        S1[FileScanner] --> S2[目录遍历 std::filesystem]
-        S2 --> S3[统计文件夹大小]
-    end
-    
-    subgraph Store[数据存储]
-        S3 --> ST1[(SQLite数据库)]
-        S3 --> ST2[(CSV文件)]
-    end
-    
-    subgraph Analyze[分析流程]
-        ST1 --> A1[读取历史数据]
-        ST2 --> A1
-        A1 --> A2[差分计算]
-        A2 --> A3[红黑树排序]
-    end
-
-    subgraph Visual[可视化]
-        A3 --> V1[生成变化报告]
-        A3 --> V2[绘制趋势图]
-    end
-
-    V1 --> U[用户查看]
-    V2 --> U
-
-
+```
 ## 📂 项目结构
 ```bash
 DiskMonitor/
@@ -115,4 +89,31 @@ DiskMonitor/
 ├── .gitignore
 ├── CMakeLists.txt
 └── README.md
+```
 
+```mermaid
+graph TD
+    subgraph Scan[扫描流程]
+        S1[FileScanner] --> S2[目录遍历 std::filesystem]
+        S2 --> S3[统计文件夹大小]
+    end
+
+    subgraph Store[数据存储]
+        S3 --> ST1[(SQLite数据库)]
+        S3 --> ST2[(CSV文件)]
+    end
+
+    subgraph Analyze[分析流程]
+        ST1 --> A1[读取历史数据]
+        ST2 --> A1
+        A1 --> A2[差分计算]
+        A2 --> A3[红黑树排序]
+    end
+
+    subgraph Visual[可视化]
+        A3 --> V1[生成变化报告]
+        A3 --> V2[绘制趋势图]
+    end
+
+    V1 --> U[用户查看]
+    V2 --> U
