@@ -47,36 +47,6 @@
 
 ---
 
-## 📂 项目结构
-```bash
-DiskMonitor/
-├── include/            # 头文件（类定义、接口声明）
-│   ├── FileScanner.h
-│   ├── DataStorage.h
-│   ├── ChangeAnalyzer.h
-│   ├── Visualizer.h
-│   └── Config.h
-│
-├── src/                # 源文件（实现）
-│   ├── FileScanner.cpp
-│   ├── DataStorage.cpp
-│   ├── ChangeAnalyzer.cpp
-│   ├── Visualizer.cpp
-│   └── main.cpp
-│
-├── data/               # 扫描结果与配置
-│   ├── history.db
-│   └── config.json
-│
-├── tests/              # 单元测试
-│   ├── test_scanner.cpp
-│   ├── test_storage.cpp
-│   └── test_analyzer.cpp
-│
-├── .gitignore
-├── CMakeLists.txt
-└── README.md
-
 ## 📊 功能模块图
 ```mermaid
 flowchart LR
@@ -114,3 +84,35 @@ graph TD
 
     V1 --> U[用户查看]
     V2 --> U
+
+
+## 📂 项目结构
+```bash
+DiskMonitor/
+├── include/            # 头文件（类定义、接口声明）
+│   ├── FileScanner.h
+│   ├── DataStorage.h
+│   ├── ChangeAnalyzer.h
+│   ├── Visualizer.h
+│   └── Config.h
+│
+├── src/                # 源文件（实现）
+│   ├── FileScanner.cpp
+│   ├── DataStorage.cpp
+│   ├── ChangeAnalyzer.cpp
+│   ├── Visualizer.cpp
+│   └── main.cpp
+│
+├── data/               # 扫描结果与配置
+│   ├── history.db
+│   └── config.json
+│
+├── tests/              # 单元测试
+│   ├── test_scanner.cpp
+│   ├── test_storage.cpp
+│   └── test_analyzer.cpp
+│
+├── .gitignore
+├── CMakeLists.txt
+└── README.md
+
