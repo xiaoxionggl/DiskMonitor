@@ -1,27 +1,118 @@
+# ========================
+# OS-specific
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# IDEs and Editors
+# ========================
 # Visual Studio
 .vs/
+*.sln
 *.suo
 *.user
 *.userosscache
+*.sdf
+*.cache
+*.pdb
+*.dbmdl
+*.log
 *.VC.db
 *.VC.opendb
 
-# Build / CMake
-build/
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (CLion, etc.)
+.idea/
+*.iml
+
+# ========================
+# Build system
+# ========================
+# CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+build/
+out/
+bin/
+obj/
+*.ninja
+*.build
+*.dir
 
-# VS binaries
+# ========================
+# Compiled binaries
+# ========================
 *.exe
 *.dll
 *.lib
+*.so
+*.a
+*.o
 *.obj
-*.pdb
 
-# Common
-*.log
+# ========================
+# Backup and temp files
+# ========================
 *.tmp
-.DS_Store
-Thumbs.db
+*.bak
+*.swp
+*.~*
+*.log
+
+# ========================
+# Python (if used for scripts)
+# ========================
+__pycache__/
+*.pyc
+
+# ========================
+# Package managers
+# ========================
+# vcpkg
+vcpkg_installed/
+vcpkg_buildtrees/
+vcpkg_packages/
+
+# Conan
+conanbuildinfo.*
+conaninfo.txt
+*.tgz
+*.tar.gz
+
+# ========================
+# Test and coverage
+# ========================
+*.gcno
+*.gcda
+*.gcov
+coverage/
+test-results/
+
+# ========================
+# Archives
+# ========================
+*.zip
+*.tar
+*.gz
+*.7z
+
+# ========================
+# Custom folders
+# ========================
+# Add your own build/output folders here
+dist/
+release/
+debug/
