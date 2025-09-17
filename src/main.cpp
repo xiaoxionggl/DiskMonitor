@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 
     std::string targetDir;
     if (argc < 2) {
-        targetDir = "E:\\";
+        targetDir = "D:\\";
         std::cout << "Î´Ìá¹©É¨ÃèÄ¿Â¼£¬Ä¬ÈÏÉ¨Ãè: " << targetDir << "\n";
     }
     else {
